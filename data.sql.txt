@@ -1,0 +1,52 @@
+-- #######################
+-- DEPARTMENTS DATA
+-- #######################
+INSERT INTO departments (departmentid, departmentname)
+VALUES 
+(1, 'Computer Science'),
+(2, 'Information Systems'),
+(3, 'Business IT');
+
+-- ##############
+-- STUDENTS DATA
+-- #############
+INSERT INTO students (studentid, firstname, lastname, email)
+VALUES 
+(1, 'Kelvin', 'Ndolo', 'kelvin@gmail.com'),
+(2, 'Emmanuel', 'Makau', 'emmanuel@gmail.com'),
+(3, 'Sarah', 'Ndinda', 'sarah@gmail.com'),
+(4, 'Brian', 'Otieno', 'brian@gmail.com'),
+(5, 'Amina', 'Ali', 'amina@gmail.com');
+
+-- ###############
+-- LECTURERS DATA
+-- ###############
+INSERT INTO lecturers (lecturerid, firstname, lastname)
+VALUES 
+(1, 'Dr', 'Kamau'),
+(2, 'Mr', 'Mwangi'),
+(3, 'Ms', 'Wanjiku');
+
+-- #############
+-- COURSES DATA
+-- #############
+INSERT INTO courses (courseid, coursename, lecturerid)
+VALUES 
+(1, 'Database Systems', 1),
+(2, 'Programming Fundamentals', 2),
+(3, 'Networking', 3),
+(4, 'Web Development', 2);
+
+-- ################
+-- ENROLMENTS DATA
+-- ###############
+INSERT INTO enrolments (enrolmentid, studentid, courseid, grade)
+VALUES 
+(1, 1, 1, 78),
+(2, 1, 2, 85),
+(3, 2, 1, 60),
+(4, 2, 3, 72),
+(5, 3, 3, 90),
+(6, 3, 2, 88),
+(7, 4, 4, 75),
+(8, 5, 1, 95);
