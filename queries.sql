@@ -63,3 +63,21 @@ SELECT
 FROM students s
 JOIN enrolments e ON s.studentid = e.studentid
 GROUP BY s.studentid, s.firstname, s.lastname;
+
+
+--view
+DROP VIEW IF EXISTS student_performance;
+
+CREATE VIEW student_performance AS
+SELECT 
+    s.studentid,
+    s.firstname,
+    s.lastname,
+    AVG(e.grade) AS avg_grade
+FROM students s
+JOIN enrolments e ON s.studentid = e.studentid
+GROUP BY s.studentid, s.firstname, s.lastname;
+
+--use view
+SELECT * FROM student_performance;
+
